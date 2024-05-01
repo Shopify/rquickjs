@@ -114,6 +114,7 @@ dump-shapes = ["rquickjs-core/dump-shapes"]
 dump-module-resolve = ["rquickjs-core/dump-module-resolve"]
 dump-promise = ["rquickjs-core/dump-promise"]
 dump-read-object = ["rquickjs-core/dump-read-object"]
+no-free = ["rquickjs-core/no-free"]
 
 # Enable compilation tests
 compile-tests = ["rquickjs-core/compile-tests"]

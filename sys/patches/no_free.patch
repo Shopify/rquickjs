@@ -1,0 +1,12 @@
+diff --git a/quickjs.c b/quickjs.c
+index e8fdd8a..48cb34b 100644
+--- a/quickjs.c
++++ b/quickjs.c
+@@ -5517,6 +5517,7 @@ static void free_zero_refcount(JSRuntime *rt)
+ /* called with the ref_count of 'v' reaches zero. */
+ void __JS_FreeValueRT(JSRuntime *rt, JSValue v)
+ {
++    return;
+     uint32_t tag = JS_VALUE_GET_TAG(v);
+ 
+ #ifdef DUMP_FREE
