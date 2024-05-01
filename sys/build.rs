@@ -95,6 +95,7 @@ fn main() {
 
     let features = [
         "bindgen",
+        "no-free",
         "update-bindings",
         "dump-bytecode",
         "dump-gc",
@@ -180,6 +181,10 @@ fn main() {
             .expect("Unable to copy source; try 'git submodule update --init'");
     }
     fs::copy("quickjs.bind.h", out_dir.join("quickjs.bind.h")).expect("Unable to copy source");
+
+    if env::var(feature_to_cargo("no_free")).is_ok() {
+        patch_files.push("no_free.patch");
+    }
 
     // applying patches
     for file in &patch_files {

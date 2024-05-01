@@ -43,3 +43,7 @@ dump-shapes = []
 dump-module-resolve = []
 dump-promise = []
 dump-read-object = []
+
+# Enables a custom patch that no-ops when freeing values.
+# Useful in WebAssembly contexts where programs are short lived.
+no-free = []
